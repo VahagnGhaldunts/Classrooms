@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Classroom: Beta</h1>
+    <input type="text" style="margin-top: 5px" />
+    <select id="choose_Day">
+      <option value="Day">Day</option>
+        <option value="mon">Monday</option>
+        <option value="tue">Tuesday</option>
+        <option value="wed">Wednesday</option>
+        <option value="thu">Thursday</option>
+        <option value="fri">Friday</option>
+        <option value="sat">Saturday</option>
+        <option value="sun">Sunday</option>
+    </select>
+    <select id="choose_lessonStart">
+      <option value="From">Time From</option>
+        <option value="1000">10</option>
+        <option value="1100">11</option>
+        <option value="1200">12</option>
+        <option value="1300">13</option>
+        <option value="1400">14</option>
+        <option value="1500">15</option>
+        <option value="1600">16</option>
+        <option value="1700">17</option>
+        <option value="1800">18</option>
+        <option value="1900">19</option>
+        <option value="2000">20</option>
+        <option value="2100">21</option>
+        <option value="2200">22</option>
+    </select>
+    <select id="choose_lessonEnd">
+      <option value="To">Time To</option>
+      <option value="1000">10</option>
+      <option value="1100">11</option>
+      <option value="1200">12</option>
+      <option value="1300">13</option>
+      <option value="1400">14</option>
+      <option value="1500">15</option>
+      <option value="1600">16</option>
+      <option value="1700">17</option>
+      <option value="1800">18</option>
+      <option value="1900">19</option>
+      <option value="2000">20</option>
+      <option value="2100">21</option>
+    </select>
+    <button>Search</button>
+    <button>See Availability</button>
+    <button>Reset Filters</button>
+    <div class="classroomAda" style="margin-top: 18px">
+      <h2>Ada Lovelace</h2>
+      <table style="border-collapse: collapse; border: 1px solid black">
+        <thead>
+          <tr>
+            <td class="time_Block">TIME</td>
+            <td><div>MON</div></td>
+            <td><div>TUE</div></td>
+            <td><div>WED</div></td>
+            <td><div>THU</div></td>
+            <td><div>FRI</div></td>
+            <td><div>SAT</div></td>
+            <td><div>SUN</div></td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="time_Block">10:00</td>
+            <td>
+              <div class="cp_bgr_st">CP1</div>
+              <p>Hayk Darbinyan</p>
+            </td>
+            <td>
+              <div class="cp_bgr_st">CP4</div>
+              <p>Hayk Darbinyan</p>
+            </td>
+            <td>
+              <div class="wd_ws_st">Design Wave 1/G1</div>
+              <p>Samvel Hayrapetyan</p>
+            </td>
+            <td>
+              <div class="cp_bgr_st">CP1</div>
+              <p>Hayk Darbinyan</p>
+            </td>
+            <td>
+              <div class="cp_bgr_st">CP4</div>
+              <p>Hayk Darbinyan</p>
+            </td>
+            <td>
+              <div class="wd_ws_st">Design Wave 1/G1</div>
+              <p>Samvel Hayrapetyan</p>
+            </td>
+            <td>
+              <div></div>
+              <p></p>
+            </td>
+          </tr>
+          <tr>
+            <td class="time_Block">10:30</td>
+            <td>
+              <div class="cp_bgr_st">CP1</div>
+              <p>Hayk Darbinyan</p>
+            </td>
+            <td>
+              <div class="cp_bgr_st">CP4</div>
+              <p>Hayk Darbinyan</p>
+            </td>
+            <td>
+              <div class="wd_ws_st">Design Wave 1/G1</div>
+              <p>Samvel Hayrapetyan</p>
+            </td>
+            <td>
+              <div class="cp_bgr_st">CP1</div>
+              <p>Hayk Darbinyan</p>
+            </td>
+            <td>
+              <div class="cp_bgr_st">CP4</div>
+              <p>Hayk Darbinyan</p>
+            </td>
+            <td>
+              <div class="wd_ws_st">Design Wave 1/G1</div>
+              <p>Samvel Hayrapetyan</p>
+            </td>
+            <td>
+              <div></div>
+              <p></p>
+            </td>
+          </tr>
+          <tr>
+            <td class="time_Block">11:00</td>
+            <td>
+              <div class="cp_bgr_st">CP1</div>
+              <p>Hayk Darbinyan</p>
+            </td>
+            <td>
+              <div class="cp_bgr_st">CP4</div>
+              <p>Hayk Darbinyan</p>
+            </td>
+            <td>
+              <div class="wd_ws_st">Design Wave 1/G1</div>
+              <p>Samvel Hayrapetyan</p>
+            </td>
+            <td>
+              <div class="cp_bgr_st">CP1</div>
+              <p>Hayk Darbinyan</p>
+            </td>
+            <td>
+              <div class="cp_bgr_st">CP4</div>
+              <p>Hayk Darbinyan</p>
+            </td>
+            <td>
+              <div class="wd_ws_st">Design Wave 1/G1</div>
+              <p>Samvel Hayrapetyan</p>
+            </td>
+            <td>
+              <div></div>
+              <p></p>
+            </td>
+          </tr>
+          <tr>
+            <td class="time_Block">11:30</td>
+            <td>
+              <div></div>
+              <p></p>
+            </td>
+            <td>
+              <div></div>
+              <p></p>
+            </td>
+            <td>
+              <div></div>
+              <p></p>
+            </td>
+            <td>
+              <div></div>
+              <p></p>
+            </td>
+            <td>
+              <div></div>
+              <p></p>
+            </td>
+            <td>
+              <div class="uibgr_st">UI/UX Beginners</div>
+              <p>Samvel Hovsepyan</p>
+            </td>
+            <td>
+              <div></div>
+              <p></p>
+            </td>
+          </tr>
+          <tr>
+            <td class="time_Block">12:00</td>
+            <td>
+              <div></div>
+              <p></p>
+            </td>
+            <td>
+              <div></div>
+              <p></p>
+            </td>
+            <td>
+              <div class="sr90_st">SR90</div>
+              <p>Vardan Grigoryan</p>
+            </td>
+            <td>
+              <div></div>
+              <p></p>
+            </td>
+            <td>
+              <div></div>
+              <p></p>
+            </td>
+            <td>
+              <div class="uibgr_st">UI/UX Beginners</div>
+              <p>Samvel Hovsepyan</p>
+            </td>
+            <td>
+              <div class="sr90_st">W5-CP9</div>
+              <p>Hayk Darbinyan</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="time_Block">12:30</td>
+            <td>
+              <div></div>
+              <p></p>
+            </td>
+            <td>
+              <div></div>
+              <p></p>
+            </td>
+            <td>
+              <div class="sr90_st">SR90</div>
+              <p>Vardan Grigoryan</p>
+            </td>
+            <td>
+              <div></div>
+              <p></p>
+            </td>
+            <td>
+              <div></div>
+              <p></p>
+            </td>
+            <td>
+              <div class="uibgr_st">UI/UX Beginners</div>
+              <p>Samvel Hovsepyan</p>
+            </td>
+            <td>
+              <div class="sr90_st">W5-CP9</div>
+              <p>Hayk Darbinyan</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="time_Block">13:00</td>
+            <td>
+              <div></div>
+              <p></p>
+            </td>
+            <td>
+              <div></div>
+              <p></p>
+            </td>
+            <td>
+              <div class="sr90_st">SR90</div>
+              <p>Vardan Grigoryan</p>
+            </td>
+            <td>
+              <div></div>
+              <p></p>
+            </td>
+            <td>
+              <div></div>
+              <p></p>
+            </td>
+            <td>
+              <div class="uibgr_st">UI/UX Beginners</div>
+              <p>Samvel Hovsepyan</p>
+            </td>
+            <td>
+              <div class="sr90_st">W5-CP9</div>
+              <p>Hayk Darbinyan</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="time_Block">13:30</td>
+            <td>
+              <div></div>
+              <p></p>
+            </td>
+            <td>
+              <div></div>
+              <p></p>
+            </td>
+            <td>
+              <div class="sr90_st">SR90</div>
+              <p>Vardan Grigoryan</p>
+            </td>
+            <td>
+              <div></div>
+              <p></p>
+            </td>
+            <td>
+              <div></div>
+              <p></p>
+            </td>
+            <td>
+              <div class="uibgr_st">UI/UX Beginners</div>
+              <p>Samvel Hovsepyan</p>
+            </td>
+            <td>
+              <div></div>
+              <p></p>
+            </td>
+          </tr>
+          <tr>
+            <td class="time_Block">14:00</td>
+            <td>
+              <div></div>
+              <p></p>
+            </td>
+            <td>
+              <div class="cp_bgr_st">CP5</div>
+              <p>Hayk Darbinyan</p>
+            </td>
+            <td>
+              <div></div>
+              <p></p>
+            </td>
+            <td>
+              <div></div>
+              <p></p>
+            </td>
+            <td>
+              <div class="cp_bgr_st">CP5</div>
+              <p>Hayk Darbinyan</p>
+            </td>
+            <td>
+              <div class="sr90_st">W4 C++ OOAD</div>
+              <p>Vardan Grigoryan</p>
+            </td>
+            <td>
+              <div class="sr90_st">W4 C++ OOAD</div>
+              <p>Vardan Grigoryan</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="time_Block">14:30</td>
+            <td>
+              <div></div>
+              <p></p>
+            </td>
+            <td>
+              <div class="cp_bgr_st">CP5</div>
+              <p>Hayk Darbinyan</p>
+            </td>
+            <td>
+              <div></div>
+              <p></p>
+            </td>
+            <td>
+              <div></div>
+              <p></p>
+            </td>
+            <td>
+              <div class="cp_bgr_st">CP5</div>
+              <p>Hayk Darbinyan</p>
+            </td>
+            <td>
+              <div class="sr90_st">W4 C++ OOAD</div>
+              <p>Vardan Grigoryan</p>
+            </td>
+            <td>
+              <div class="sr90_st">W4 C++ OOAD</div>
+              <p>Vardan Grigoryan</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="time_Block">15:00</td>
+            <td>
+              <div class="cp_bgr_st">CP2</div>
+              <p>Hayk Darbinyan</p>
+            </td>
+            <td>
+              <div class="cp_bgr_st">CP5</div>
+              <p>Hayk Darbinyan</p>
+            </td>
+            <td>
+              <div></div>
+              <p></p>
+            </td>
+            <td>
+              <div class="cp_bgr_st">CP2</div>
+              <p>Hayk Darbinyan</p>
+            </td>
+            <td>
+              <div class="cp_bgr_st">CP5</div>
+              <p>Hayk Darbinyan</p>
+            </td>
+            <td>
+              <div class="sr90_st">W4 C++ OOAD</div>
+              <p>Vardan Grigoryan</p>
+            </td>
+            <td>
+              <div class="sr90_st">W4 C++ OOAD</div>
+              <p>Vardan Grigoryan</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="time_Block">15:30</td>
+            <td>
+              <div class="cp_bgr_st">CP2</div>
+              <p>Hayk Darbinyan</p>
+            </td>
+            <td>
+              <div></div>
+              <p></p>
+            </td>
+            <td>
+              <div></div>
+              <p></p>
+            </td>
+            <td>
+              <div class="cp_bgr_st">CP2</div>
+              <p>Hayk Darbinyan</p>
+            </td>
+            <td>
+              <div></div>
+              <p></p>
+            </td>
+            <td>
+              <div></div>
+              <p></p>
+            </td>
+            <td>
+              <div></div>
+              <p></p>
+            </td>
+          </tr>
+          <tr>
+            <td class="time_Block">16:00</td>
+            <td>
+              <div class="cp_bgr_st">CP2</div>
+              <p>Hayk Darbinyan</p>
+            </td>
+            <td>
+              <div class="cp_bgr_st">W3 Algorithms</div>
+              <p>Vardan Grigoryan</p>
+            </td>
+            <td>
+              <div class="wd_ws_st">Design Wave 1/G2</div>
+              <p>Samvel Hayrapetyan</p>
+            </td>
+            <td>
+              <div class="cp_bgr_st">CP2</div>
+              <p>Hayk Darbinyan</p>
+            </td>
+            <td>
+              <div class="cp_bgr_st">W3 Algorithms</div>
+              <p>Vardan Grigoryan</p>
+            </td>
+            <td>
+              <div class="wd_ws_st">Design Wave 1/G2</div>
+              <p>Samvel Hayrapetyan</p>
+            </td>
+            <td>
+              <div></div>
+              <p></p>
+            </td>
+          </tr>
+          <tr>
+            <td class="time_Block">16:30</td>
+            <td>
+              <div></div>
+              <p></p>
+            </td>
+            <td>
+              <div class="cp_bgr_st">W3 Algorithms</div>
+              <p>Vardan Grigoryan</p>
+            </td>
+            <td>
+              <div class="wd_ws_st">Design Wave 1/G2</div>
+              <p>Samvel Hayrapetyan</p>
+            </td>
+            <td>
+              <div></div>
+              <p></p>
+            </td>
+            <td>
+              <div class="cp_bgr_st">W3 Algorithms</div>
+              <p>Vardan Grigoryan</p>
+            </td>
+            <td>
+              <div class="wd_ws_st">Design Wave 1/G2</div>
+              <p>Samvel Hayrapetyan</p>
+            </td>
+            <td>
+              <div></div>
+              <p></p>
+            </td>
+          </tr>
+          <tr>
+            <td class="time_Block">17:00</td>
+            <td>
+              <div></div>
+              <p></p>
+            </td>
+            <td>
+              <div class="cp_bgr_st">W3 Algorithms</div>
+              <p>Vardan Grigoryan</p>
+            </td>
+            <td>
+              <div class="wd_ws_st">Design Wave 1/G2</div>
+              <p>Samvel Hayrapetyan</p>
+            </td>
+            <td>
+              <div></div>
+              <p></p>
+            </td>
+            <td>
+              <div class="cp_bgr_st">W3 Algorithms</div>
+              <p>Vardan Grigoryan</p>
+            </td>
+            <td>
+              <div class="wd_ws_st">Design Wave 1/G2</div>
+              <p>Samvel Hayrapetyan</p>
+            </td>
+            <td>
+              <div></div>
+              <p></p>
+            </td>
+          </tr>
+          <tr>
+            <td class="time_Block">17:30</td>
+            <td>
+              <div></div>
+              <p></p>
+            </td>
+            <td>
+              <div class="sr90_st">CP Restart</div>
+              <p>Hayk Darbinyan</p>
+            </td>
+            <td>
+              <div></div>
+              <p></p>
+            </td>
+            <td>
+              <div></div>
+              <p></p>
+            </td>
+            <td>
+              <div></div>
+              <p></p>
+            </td>
+            <td>
+              <div class="sr90_st">CP Restart</div>
+              <p>Hayk Darbinyan</p>
+            </td>
+            <td>
+              <div></div>
+              <p></p>
+            </td>
+          </tr>
+          <tr>
+            <td class="time_Block">18:00</td>
+            <td>
+              <div class="sr90_st">W5 C++ G1</div>
+              <p>Vardan Grigoryan</p>
+            </td>
+            <td>
+              <div class="sr90_st">CP Restart</div>
+              <p>Hayk Darbinyan</p>
+            </td>
+            <td>
+              <div></div>
+              <p></p>
+            </td>
+            <td>
+              <div class="sr90_st">W5 C++ G1</div>
+              <p>Vardan Grigoryan</p>
+            </td>
+            <td>
+              <div></div>
+              <p></p>
+            </td>
+            <td>
+              <div class="sr90_st">CP Restart</div>
+              <p>Hayk Darbinyan</p>
+            </td>
+            <td>
+              <div></div>
+              <p></p>
+            </td>
+          </tr>
+          <tr>
+            <td class="time_Block">18:30</td>
+            <td>
+              <div class="sr90_st">W5 C++ G1</div>
+              <p>Vardan Grigoryan</p>
+            </td>
+            <td>
+              <div class="cp_bgr_st">CP Restart</div>
+              <p>Hayk Darbinyan</p>
+            </td>
+            <td>
+              <div class="cp_bgr_st">CP6</div>
+              <p>Hayk Darbinyan</p>
+            </td>
+            <td>
+              <div class="sr90_st">W5 C++ G1</div>
+              <p>Vardan Grigoryan</p>
+            </td>
+            <td>
+              <div class="cp_bgr_st">CP6</div>
+              <p>Hayk Darbinyan</p>
+            </td>
+            <td>
+              <div class="sr90_st">CP Restart</div>
+              <p>Hayk Darbinyan</p>
+            </td>
+            <td>
+              <div></div>
+              <p></p>
+            </td>
+          </tr>
+          <tr>
+            <td class="time_Block">19:00</td>
+            <td>
+              <div class="sr90_st">W5 C++ G1</div>
+              <p>Vardan Grigoryan</p>
+            </td>
+            <td>
+              <div class="wd_ws_st">Workshop 06 June</div>
+              <p>Ovidiu Gavri</p>
+            </td>
+            <td>
+              <div class="cp_bgr_st">CP6</div>
+              <p>Hayk Darbinyan</p>
+            </td>
+            <td>
+              <div class="sr90_st">W5 C++ G1</div>
+              <p>Vardan Grigoryan</p>
+            </td>
+            <td>
+              <div class="cp_bgr_st">CP6</div>
+              <p>Hayk Darbinyan</p>
+            </td>
+            <td>
+              <div></div>
+              <p></p>
+            </td>
+            <td>
+              <div></div>
+              <p></p>
+            </td>
+          </tr>
+          <tr>
+            <td class="time_Block">19:30</td>
+            <td>
+              <div class="sr90_st">W5 C++ G1</div>
+              <p>Vardan Grigoryan</p>
+            </td>
+            <td>
+              <div class="wd_ws_st">Workshop 06 June</div>
+              <p>Ovidiu Gavri</p>
+            </td>
+            <td>
+              <div class="cp_bgr_st">CP6</div>
+              <p>Hayk Darbinyan</p>
+            </td>
+            <td>
+              <div class="sr90_st">W5 C++ G1</div>
+              <p>Vardan Grigoryan</p>
+            </td>
+            <td>
+              <div class="cp_bgr_st">CP6</div>
+              <p>Hayk Darbinyan</p>
+            </td>
+            <td>
+              <div class="sr90_st">W5-CP9</div>
+              <p>Hayk Darbinyan</p>
+            </td>
+            <td>
+              <div></div>
+              <p></p>
+            </td>
+          </tr>
+          <tr>
+            <td class="time_Block">20:00</td>
+            <td>
+              <div class="cp_bgr_st">CP3</div>
+              <p>Hayk Darbinyan</p>
+            </td>
+            <td>
+              <div class="sr90_st">W5 C++ G2</div>
+              <p>Vardan Grigoryan</p>
+            </td>
+            <td>
+              <div class="sr90_st">W5 Python</div>
+              <p>John Asatryan</p>
+            </td>
+            <td>
+              <div class="cp_bgr_st">CP3</div>
+              <p>Hayk Darbinyan</p>
+            </td>
+            <td>
+              <div class="sr90_st">W5 JavaScript</div>
+              <p>Vardan Grigoryan</p>
+            </td>
+            <td>
+              <div class="sr90_st">W5-CP9</div>
+              <p>Hayk Darbinyan</p>
+            </td>
+            <td>
+              <div></div>
+              <p></p>
+            </td>
+          </tr>
+          <tr>
+            <td class="time_Block">20:30</td>
+            <td>
+              <div class="cp_bgr_st">CP3</div>
+              <p>Hayk Darbinyan</p>
+            </td>
+            <td>
+              <div class="sr90_st">W5 C++ G2</div>
+              <p>Vardan Grigoryan</p>
+            </td>
+            <td>
+              <div class="sr90_st">W5 Python</div>
+              <p>John Asatryan</p>
+            </td>
+            <td>
+              <div class="cp_bgr_st">CP3</div>
+              <p>Hayk Darbinyan</p>
+            </td>
+            <td>
+              <div class="sr90_st">W5 JavaScript</div>
+              <p>Vardan Grigoryan</p>
+            </td>
+            <td>
+              <div class="sr90_st">W5-CP9</div>
+              <p>Hayk Darbinyan</p>
+            </td>
+            <td>
+              <div></div>
+              <p></p>
+            </td>
+          </tr>
+          <tr>
+            <td class="time_Block">21:00</td>
+            <td>
+              <div class="cp_bgr_st">CP3</div>
+              <p>Hayk Darbinyan</p>
+            </td>
+            <td>
+              <div class="sr90_st">W5 C++ G2</div>
+              <p>Vardan Grigoryan</p>
+            </td>
+            <td>
+              <div class="sr90_st">W5 Python</div>
+              <p>John Asatryan</p>
+            </td>
+            <td>
+              <div class="cp_bgr_st">CP3</div>
+              <p>Hayk Darbinyan</p>
+            </td>
+            <td>
+              <div class="sr90_st">W5 JavaScript</div>
+              <p>Vardan Grigoryan</p>
+            </td>
+            <td>
+              <div></div>
+              <p></p>
+            </td>
+            <td>
+              <div></div>
+              <p></p>
+            </td>
+          </tr>
+          <tr>
+            <td class="time_Block">21:30</td>
+            <td>
+              <div></div>
+              <p></p>
+            </td>
+            <td>
+              <div class="sr90_st">W5 C++ G2</div>
+              <p>Vardan Grigoryan</p>
+            </td>
+            <td>
+              <div></div>
+              <p></p>
+            </td>
+            <td>
+              <div></div>
+              <p></p>
+            </td>
+            <td>
+              <div class="sr90_st">W5 JavaScript</div>
+              <p>Vardan Grigoryan</p>
+            </td>
+            <td>
+              <div></div>
+              <p></p>
+            </td>
+            <td>
+              <div></div>
+              <p></p>
+            </td>
+          </tr>
+          <tr>
+            <td class="time_Block">22:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td class="time_Block">22:30</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>
