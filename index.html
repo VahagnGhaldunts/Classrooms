@@ -5,13 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <script src="script.js"></script>
     <title>Document</title>
   </head>
   <body>
     <h1>Classroom: Beta</h1>
-    <input type="text" style="margin-top: 5px" />
-    <select id="choose_Day">
+    <input type="text" id="search" style="margin-top: 5px" />
+    <select id="section">
       <option value="Day">Day</option>
       <option value="mon">Monday</option>
       <option value="tue">Tuesday</option>
@@ -21,7 +20,7 @@
       <option value="sat">Saturday</option>
       <option value="sun">Sunday</option>
     </select>
-    <select id="choose_lessonStart">
+    <select id="selectFilter2">
       <option value="From">Time From</option>
       <option value="1000">10</option>
       <option value="1100">11</option>
@@ -37,7 +36,7 @@
       <option value="2100">21</option>
       <option value="2200">22</option>
     </select>
-    <select id="choose_lessonEnd">
+    <select id="selectFilter">
       <option value="To">Time To</option>
       <option value="1000">10</option>
       <option value="1100">11</option>
@@ -2422,6 +2421,6 @@
         </tbody>
       </table>
     </div>
-    
+    <script src="./script.js"></script>
   </body>
 </html>

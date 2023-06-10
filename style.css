@@ -110,3 +110,6 @@ button.filter {
     border: none;
     cursor: pointer;
 }
+button.filter:hover{
+  background-color:#969393;
+}
