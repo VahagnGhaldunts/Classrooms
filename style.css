@@ -45,20 +45,16 @@
     text-align: center;
   }
   
-  .cp_bgr_st {
+  .cp1_col,.cp4_col, .ui_col,.cp5_col, .cp2_col, .w3alg_col,.cpres_col,.cp6_col, .cp3_col, .and_col,.w5java_col,.w06_col{
     background-color: #ff5722;
     padding: 5px;
   }
-  
-  .uibgr_st {
-    background-color: #ff5722;
-    padding: 5px;
-  }
-  .sr90_st{
+ 
+  .sr90_col,.w4_c_col,.cpres_col,.w5-G1_col,.w5-G2_col,.w5-phy_col,.w5-JS_col,.w3-eng_col,.w4-phy_col,.em1_col,.em4_col,.gd-G1_col,.en-pr_col,.ui-LU_col,.tei_col,.uiB1_col,.uiB2_col{
     background-color:#25cf19;
     padding: 5px;
   }
-  .wd_ws_st{
+  .des1-G1_col,.des1-G2_col,.des1-G3_col,.nwork_col{
     background-color:rgb(239, 208, 30);
     padding: 5px;
   }
