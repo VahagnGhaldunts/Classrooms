@@ -52,11 +52,27 @@
       <option value="2000">20</option>
       <option value="2100">21</option>
     </select>
-    <button>Search</button>
-    <button>See Availability</button>
-    <button>Reset Filters</button>
+    <div class="table-responsive" id="searchResults" style="display: none;">
+      <h4>Search Results</h4>
+      <button onclick="cleanSearchResults()" class="btn btn-danger">X</button>
+      <table class="table table-bordered text-center" id="searchResultsGroupsTable">
+          <thead>
+              <tr class="bg-light-gray">
+                  <th class="text-uppercase">Group</th>
+                  <th class="text-uppercase">Classroom</th>
+                  <th class="text-uppercase">Schedule</th>
+              </tr>
+          </thead>
+          <tbody>
+          </tbody>
+      </table>
+  </div>
+  <button onclick="performSearch()" class="search">Search</button>
+  <button onclick="findAvailableSpots()" class="see">See Availability</button>
+  <button onclick="resetFilters()" class="filter">Reset Filters</button>
+
     <div class="classroomAda" style="margin-top: 18px">
-      <h2>Ada Lovelace</h2>
+      <h3>Ada Lovelace</h3>
       <table style="border-collapse: collapse; border: 1px solid black">
         <thead>
           <tr>
@@ -75,27 +91,27 @@
             <td class="time_Block">10:00</td>
             <td>
               <div class="cp1_col">CP1</div>
-              <p>Hayk Darbinyan</p>
+              <p class="teacher_name">Hayk Darbinyan</p>
             </td>
             <td>
               <div class="cp4_col">CP4</div>
-              <p>Hayk Darbinyan</p>
+              <p class="teacher_name">Hayk Darbinyan</p>
             </td>
             <td>
               <div class="des1-G1_col">Design Wave 1/G1</div>
-              <p>Samvel Hayrapetyan</p>
+              <p class="teacher_name">Samvel Hayrapetyan</p>
             </td>
             <td>
               <div class="cp1_col">CP1</div>
-              <p>Hayk Darbinyan</p>
+              <p class="teacher_name">Hayk Darbinyan</p>
             </td>
             <td>
               <div class="cp4_col">CP4</div>
-              <p>Hayk Darbinyan</p>
+              <p class="teacher_name">Hayk Darbinyan</p>
             </td>
             <td>
               <div class="des1-G1_col">Design Wave 1/G1</div>
-              <p>Samvel Hayrapetyan</p>
+              <p class="teacher_name">Samvel Hayrapetyan</p>
             </td>
             <td>
               <div></div>
@@ -106,27 +122,27 @@
             <td class="time_Block">10:30</td>
             <td>
               <div class="cp1_col">CP1</div>
-              <p>Hayk Darbinyan</p>
+              <p class="teacher_name">Hayk Darbinyan</p>
             </td>
             <td>
               <div class="cp4_col">CP4</div>
-              <p>Hayk Darbinyan</p>
+              <p class="teacher_name">Hayk Darbinyan</p>
             </td>
             <td>
               <div class="des1-G1_col">Design Wave 1/G1</div>
-              <p>Samvel Hayrapetyan</p>
+              <p class="teacher_name">Samvel Hayrapetyan</p>
             </td>
             <td>
               <div class="cp1_col">CP1</div>
-              <p>Hayk Darbinyan</p>
+              <p class="teacher_name">Hayk Darbinyan</p>
             </td>
             <td>
               <div class="cp4_col">CP4</div>
-              <p>Hayk Darbinyan</p>
+              <p class="teacher_name">Hayk Darbinyan</p>
             </td>
             <td>
               <div class="des1-G1_col">Design Wave 1/G1</div>
-              <p>Samvel Hayrapetyan</p>
+              <p class="teacher_name">Samvel Hayrapetyan</p>
             </td>
             <td>
               <div></div>
@@ -137,27 +153,27 @@
             <td class="time_Block">11:00</td>
             <td>
               <div class="cp1_col">CP1</div>
-              <p>Hayk Darbinyan</p>
+              <p class="teacher_name">Hayk Darbinyan</p>
             </td>
             <td>
               <div class="cp4_col">CP4</div>
-              <p>Hayk Darbinyan</p>
+              <p class="teacher_name">Hayk Darbinyan</p>
             </td>
             <td>
               <div class="des1-G1_col">Design Wave 1/G1</div>
-              <p>Samvel Hayrapetyan</p>
+              <p class="teacher_name">Samvel Hayrapetyan</p>
             </td>
             <td>
               <div class="cp1_col">CP1</div>
-              <p>Hayk Darbinyan</p>
+              <p class="teacher_name">Hayk Darbinyan</p>
             </td>
             <td>
               <div class="cp4_col">CP4</div>
-              <p>Hayk Darbinyan</p>
+              <p class="teacher_name">Hayk Darbinyan</p>
             </td>
             <td>
               <div class="des1-G1_col">Design Wave 1/G1</div>
-              <p>Samvel Hayrapetyan</p>
+              <p class="teacher_name">Samvel Hayrapetyan</p>
             </td>
             <td>
               <div></div>
@@ -188,7 +204,7 @@
             </td>
             <td>
               <div class="ui_col">UI/UX Beginners</div>
-              <p>Samvel Hovsepyan</p>
+              <p class="teacher_name">Samvel Hovsepyan</p>
             </td>
             <td>
               <div></div>
@@ -207,7 +223,7 @@
             </td>
             <td>
               <div class="sr90_col">SR90</div>
-              <p>Vardan Grigoryan</p>
+              <p class="teacher_name">Vardan Grigoryan</p>
             </td>
             <td>
               <div></div>
@@ -219,7 +235,7 @@
             </td>
             <td>
               <div class="ui_col">UI/UX Beginners</div>
-              <p>Samvel Hovsepyan</p>
+              <p class="teacher_name">Samvel Hovsepyan</p>
             </td>
             <td>
               <div></div>
@@ -238,7 +254,7 @@
             </td>
             <td>
               <div class="sr90_col">SR90</div>
-              <p>Vardan Grigoryan</p>
+              <p class="teacher_name">Vardan Grigoryan</p>
             </td>
             <td>
               <div></div>
@@ -250,7 +266,7 @@
             </td>
             <td>
               <div class="ui_col">UI/UX Beginners</div>
-              <p>Samvel Hovsepyan</p>
+              <p class="teacher_name">Samvel Hovsepyan</p>
             </td>
             <td>
               <div></div>
@@ -269,7 +285,7 @@
             </td>
             <td>
               <div class="sr90_col">SR90</div>
-              <p>Vardan Grigoryan</p>
+              <p class="teacher_name">Vardan Grigoryan</p>
             </td>
             <td>
               <div></div>
@@ -281,7 +297,7 @@
             </td>
             <td>
               <div class="ui_col">UI/UX Beginners</div>
-              <p>Samvel Hovsepyan</p>
+              <p class="teacher_name">Samvel Hovsepyan</p>
             </td>
             <td>
               <div></div>
@@ -300,7 +316,7 @@
             </td>
             <td>
               <div class="sr90_col">SR90</div>
-              <p>Vardan Grigoryan</p>
+              <p class="teacher_name">Vardan Grigoryan</p>
             </td>
             <td>
               <div></div>
@@ -312,7 +328,7 @@
             </td>
             <td>
               <div class="ui_col">UI/UX Beginners</div>
-              <p>Samvel Hovsepyan</p>
+              <p class="teacher_name">Samvel Hovsepyan</p>
             </td>
             <td>
               <div></div>
@@ -327,7 +343,7 @@
             </td>
             <td>
               <div class="cp5_col">CP5</div>
-              <p>Hayk Darbinyan</p>
+              <p class="teacher_name">Hayk Darbinyan</p>
             </td>
             <td>
               <div></div>
@@ -339,15 +355,15 @@
             </td>
             <td>
               <div class="cp5_col">CP5</div>
-              <p>Hayk Darbinyan</p>
+              <p class="teacher_name">Hayk Darbinyan</p>
             </td>
             <td>
               <div class="w4_c_col">W4 C++ OOAD</div>
-              <p>Vardan Grigoryan</p>
+              <p class="teacher_name">Vardan Grigoryan</p>
             </td>
             <td>
               <div class="w4_c_col">W4 C++ OOAD</div>
-              <p>Vardan Grigoryan</p>
+              <p class="teacher_name">Vardan Grigoryan</p>
             </td>
           </tr>
           <tr>
@@ -358,7 +374,7 @@
             </td>
             <td>
               <div class="cp5_col">CP5</div>
-              <p>Hayk Darbinyan</p>
+              <p class="teacher_name">Hayk Darbinyan</p>
             </td>
             <td>
               <div></div>
@@ -370,26 +386,26 @@
             </td>
             <td>
               <div class="cp5_col">CP5</div>
-              <p>Hayk Darbinyan</p>
+              <p class="teacher_name">Hayk Darbinyan</p>
             </td>
             <td>
               <div class="w4_c_col">W4 C++ OOAD</div>
-              <p>Vardan Grigoryan</p>
+              <p class="teacher_name">Vardan Grigoryan</p>
             </td>
             <td>
               <div class="w4_c_col">W4 C++ OOAD</div>
-              <p>Vardan Grigoryan</p>
+              <p class="teacher_name">Vardan Grigoryan</p>
             </td>
           </tr>
           <tr>
             <td class="time_Block">15:00</td>
             <td>
               <div class="cp2_col">CP2</div>
-              <p>Hayk Darbinyan</p>
+              <p class="teacher_name">Hayk Darbinyan</p>
             </td>
             <td>
               <div class="cp5_col">CP5</div>
-              <p>Hayk Darbinyan</p>
+              <p class="teacher_name">Hayk Darbinyan</p>
             </td>
             <td>
               <div></div>
@@ -397,26 +413,26 @@
             </td>
             <td>
               <div class="cp2_col">CP2</div>
-              <p>Hayk Darbinyan</p>
+              <p class="teacher_name">Hayk Darbinyan</p>
             </td>
             <td>
               <div class="cp5_col">CP5</div>
-              <p>Hayk Darbinyan</p>
+              <p class="teacher_name">Hayk Darbinyan</p>
             </td>
             <td>
               <div class="w4_c_col">W4 C++ OOAD</div>
-              <p>Vardan Grigoryan</p>
+              <p class="teacher_name">Vardan Grigoryan</p>
             </td>
             <td>
               <div class="w4_c_col">W4 C++ OOAD</div>
-              <p>Vardan Grigoryan</p>
+              <p class="teacher_name">Vardan Grigoryan</p>
             </td>
           </tr>
           <tr>
             <td class="time_Block">15:30</td>
             <td>
               <div class="cp2_col">CP2</div>
-              <p>Hayk Darbinyan</p>
+              <p class="teacher_name">Hayk Darbinyan</p>
             </td>
             <td>
               <div></div>
@@ -428,7 +444,7 @@
             </td>
             <td>
               <div class="cp2_col">CP2</div>
-              <p>Hayk Darbinyan</p>
+              <p class="teacher_name">Hayk Darbinyan</p>
             </td>
             <td>
               <div></div>
@@ -447,27 +463,27 @@
             <td class="time_Block">16:00</td>
             <td>
               <div class="cp2_col">CP2</div>
-              <p>Hayk Darbinyan</p>
+              <p class="teacher_name">Hayk Darbinyan</p>
             </td>
             <td>
               <div class="w3alg_col">W3 Algorithms</div>
-              <p>Vardan Grigoryan</p>
+              <p class="teacher_name">Vardan Grigoryan</p>
             </td>
             <td>
               <div class="des1-G2_col">Design Wave 1/G2</div>
-              <p>Samvel Hayrapetyan</p>
+              <p class="teacher_name">Samvel Hayrapetyan</p>
             </td>
             <td>
               <div class="cp2_col">CP2</div>
-              <p>Hayk Darbinyan</p>
+              <p class="teacher_name">Hayk Darbinyan</p>
             </td>
             <td>
               <div class="w3alg_col">W3 Algorithms</div>
-              <p>Vardan Grigoryan</p>
+              <p class="teacher_name">Vardan Grigoryan</p>
             </td>
             <td>
               <div class="des1-G2_col">Design Wave 1/G2</div>
-              <p>Samvel Hayrapetyan</p>
+              <p class="teacher_name">Samvel Hayrapetyan</p>
             </td>
             <td>
               <div></div>
@@ -482,11 +498,11 @@
             </td>
             <td>
               <div class="w3alg_col">W3 Algorithms</div>
-              <p>Vardan Grigoryan</p>
+              <p class="teacher_name">Vardan Grigoryan</p>
             </td>
             <td>
               <div class="des1-G2_col">Design Wave 1/G2</div>
-              <p>Samvel Hayrapetyan</p>
+              <p class="teacher_name">Samvel Hayrapetyan</p>
             </td>
             <td>
               <div></div>
@@ -494,11 +510,11 @@
             </td>
             <td>
               <div class="w3alg_col">W3 Algorithms</div>
-              <p>Vardan Grigoryan</p>
+              <p class="teacher_name">Vardan Grigoryan</p>
             </td>
             <td>
               <div class="des1-G2_col">Design Wave 1/G2</div>
-              <p>Samvel Hayrapetyan</p>
+              <p class="teacher_name">Samvel Hayrapetyan</p>
             </td>
             <td>
               <div></div>
@@ -513,11 +529,11 @@
             </td>
             <td>
               <div class="w3alg_col">W3 Algorithms</div>
-              <p>Vardan Grigoryan</p>
+              <p class="teacher_name">Vardan Grigoryan</p>
             </td>
             <td>
               <div class="des1-G2_col">Design Wave 1/G2</div>
-              <p>Samvel Hayrapetyan</p>
+              <p class="teacher_name">Samvel Hayrapetyan</p>
             </td>
             <td>
               <div></div>
@@ -525,11 +541,11 @@
             </td>
             <td>
               <div class="w3alg_col">W3 Algorithms</div>
-              <p>Vardan Grigoryan</p>
+              <p class="teacher_name">Vardan Grigoryan</p>
             </td>
             <td>
               <div class="des1-G2_col">Design Wave 1/G2</div>
-              <p>Samvel Hayrapetyan</p>
+              <p class="teacher_name">Samvel Hayrapetyan</p>
             </td>
             <td>
               <div></div>
@@ -544,7 +560,7 @@
             </td>
             <td>
               <div class="cpres_col">CP Restart</div>
-              <p>Hayk Darbinyan</p>
+              <p class="teacher_name">Hayk Darbinyan</p>
             </td>
             <td>
               <div></div>
@@ -560,7 +576,7 @@
             </td>
             <td>
               <div class="cpres_col">CP Restart</div>
-              <p>Hayk Darbinyan</p>
+              <p class="teacher_name">Hayk Darbinyan</p>
             </td>
             <td>
               <div></div>
@@ -571,11 +587,11 @@
             <td class="time_Block">18:00</td>
             <td>
               <div class="w5-G1_col">W5 C++ G1</div>
-              <p>Vardan Grigoryan</p>
+              <p class="teacher_name">Vardan Grigoryan</p>
             </td>
             <td>
               <div class="cpres_col">CP Restart</div>
-              <p>Hayk Darbinyan</p>
+              <p class="teacher_name">Hayk Darbinyan</p>
             </td>
             <td>
               <div></div>
@@ -583,7 +599,7 @@
             </td>
             <td>
               <div class="w5-G1_col">W5 C++ G1</div>
-              <p>Vardan Grigoryan</p>
+              <p class="teacher_name">Vardan Grigoryan</p>
             </td>
             <td>
               <div></div>
@@ -591,7 +607,7 @@
             </td>
             <td>
               <div class="cpres_col">CP Restart</div>
-              <p>Hayk Darbinyan</p>
+              <p class="teacher_name">Hayk Darbinyan</p>
             </td>
             <td>
               <div></div>
@@ -602,27 +618,27 @@
             <td class="time_Block">18:30</td>
             <td>
               <div class="w5-G1_col">W5 C++ G1</div>
-              <p>Vardan Grigoryan</p>
+              <p class="teacher_name">Vardan Grigoryan</p>
             </td>
             <td>
               <div class="cpres_col">CP Restart</div>
-              <p>Hayk Darbinyan</p>
+              <p class="teacher_name">Hayk Darbinyan</p>
             </td>
             <td>
               <div class="cp6_col">CP6</div>
-              <p>Hayk Darbinyan</p>
+              <p class="teacher_name">Hayk Darbinyan</p>
             </td>
             <td>
               <div class="w5-G1_col">W5 C++ G1</div>
-              <p>Vardan Grigoryan</p>
+              <p class="teacher_name">Vardan Grigoryan</p>
             </td>
             <td>
               <div class="cp6_col">CP6</div>
-              <p>Hayk Darbinyan</p>
+              <p class="teacher_name">Hayk Darbinyan</p>
             </td>
             <td>
               <div class="cpres_col">CP Restart</div>
-              <p>Hayk Darbinyan</p>
+              <p class="teacher_name">Hayk Darbinyan</p>
             </td>
             <td>
               <div></div>
@@ -633,23 +649,23 @@
             <td class="time_Block">19:00</td>
             <td>
               <div class="w5-G1_col">W5 C++ G1</div>
-              <p>Vardan Grigoryan</p>
+              <p class="teacher_name">Vardan Grigoryan</p>
             </td>
             <td>
               <div class="w06_col">Workshop 06 June</div>
-              <p>Ovidiu Gavri</p>
+              <p class="teacher_name">Ovidiu Gavri</p>
             </td>
             <td>
               <div class="cp6_col">CP6</div>
-              <p>Hayk Darbinyan</p>
+              <p class="teacher_name">Hayk Darbinyan</p>
             </td>
             <td>
               <div class="w5-G1_col">W5 C++ G1</div>
-              <p>Vardan Grigoryan</p>
+              <p class="teacher_name">Vardan Grigoryan</p>
             </td>
             <td>
               <div class="cp6_col">CP6</div>
-              <p>Hayk Darbinyan</p>
+              <p class="teacher_name">Hayk Darbinyan</p>
             </td>
             <td>
               <div></div>
@@ -664,23 +680,23 @@
             <td class="time_Block">19:30</td>
             <td>
               <div class="w5-G1_col">W5 C++ G1</div>
-              <p>Vardan Grigoryan</p>
+              <p class="teacher_name">Vardan Grigoryan</p>
             </td>
             <td>
               <div class="w06_col">Workshop 06 June</div>
-              <p>Ovidiu Gavri</p>
+              <p class="teacher_name">Ovidiu Gavri</p>
             </td>
             <td>
               <div class="cp6_col">CP6</div>
-              <p>Hayk Darbinyan</p>
+              <p class="teacher_name">Hayk Darbinyan</p>
             </td>
             <td>
               <div class="w5-G1_col">W5 C++ G1</div>
-              <p>Vardan Grigoryan</p>
+              <p class="teacher_name">Vardan Grigoryan</p>
             </td>
             <td>
               <div class="cp6_col">CP6</div>
-              <p>Hayk Darbinyan</p>
+              <p class="teacher_name">Hayk Darbinyan</p>
             </td>
             <td>
               <div></div>
@@ -695,23 +711,23 @@
             <td class="time_Block">20:00</td>
             <td>
               <div class="cp3_col">CP3</div>
-              <p>Hayk Darbinyan</p>
+              <p class="teacher_name">Hayk Darbinyan</p>
             </td>
             <td>
               <div class="w5-G2_col">W5 C++ G2</div>
-              <p>Vardan Grigoryan</p>
+              <p class="teacher_name">Vardan Grigoryan</p>
             </td>
             <td>
               <div class="w5-phy_col">W5 Python</div>
-              <p>John Asatryan</p>
+              <p class="teacher_name">John Asatryan</p>
             </td>
             <td>
               <div class="cp3_col">CP3</div>
-              <p>Hayk Darbinyan</p>
+              <p class="teacher_name">Hayk Darbinyan</p>
             </td>
             <td>
               <div class="w5-JS_col">W5 JavaScript</div>
-              <p>Vardan Grigoryan</p>
+              <p class="teacher_name">Vardan Grigoryan</p>
             </td>
             <td>
               <div></div>
@@ -726,23 +742,23 @@
             <td class="time_Block">20:30</td>
             <td>
               <div class="cp3_col">CP3</div>
-              <p>Hayk Darbinyan</p>
+              <p class="teacher_name">Hayk Darbinyan</p>
             </td>
             <td>
               <div class="w5-G2_col">W5 C++ G2</div>
-              <p>Vardan Grigoryan</p>
+              <p class="teacher_name">Vardan Grigoryan</p>
             </td>
             <td>
               <div class="w5-phy_col">W5 Python</div>
-              <p>John Asatryan</p>
+              <p class="teacher_name">John Asatryan</p>
             </td>
             <td>
               <div class="cp3_col">CP3</div>
-              <p>Hayk Darbinyan</p>
+              <p class="teacher_name">Hayk Darbinyan</p>
             </td>
             <td>
               <div class="w5-JS_col">W5 JavaScript</div>
-              <p>Vardan Grigoryan</p>
+              <p class="teacher_name">Vardan Grigoryan</p>
             </td>
             <td>
               <div></div>
@@ -757,23 +773,23 @@
             <td class="time_Block">21:00</td>
             <td>
               <div class="cp3_col">CP3</div>
-              <p>Hayk Darbinyan</p>
+              <p class="teacher_name">Hayk Darbinyan</p>
             </td>
             <td>
               <div class="w5-G2_col">W5 C++ G2</div>
-              <p>Vardan Grigoryan</p>
+              <p class="teacher_name">Vardan Grigoryan</p>
             </td>
             <td>
               <div class="w5-phy_col">W5 Python</div>
-              <p>John Asatryan</p>
+              <p class="teacher_name">John Asatryan</p>
             </td>
             <td>
               <div class="cp3_col">CP3</div>
-              <p>Hayk Darbinyan</p>
+              <p class="teacher_name">Hayk Darbinyan</p>
             </td>
             <td>
               <div class="w5-JS_col">W5 JavaScript</div>
-              <p>Vardan Grigoryan</p>
+              <p class="teacher_name">Vardan Grigoryan</p>
             </td>
             <td>
               <div></div>
@@ -792,7 +808,7 @@
             </td>
             <td>
               <div class="w5-G2_col">W5 C++ G2</div>
-              <p>Vardan Grigoryan</p>
+              <p class="teacher_name">Vardan Grigoryan</p>
             </td>
             <td>
               <div></div>
@@ -804,7 +820,7 @@
             </td>
             <td>
               <div class="w5-JS_col">W5 JavaScript</div>
-              <p>Vardan Grigoryan</p>
+              <p class="teacher_name">Vardan Grigoryan</p>
             </td>
             <td>
               <div></div>
@@ -879,7 +895,7 @@
             </td>
             <td>
               <div class="w3-eng_col">W3-English/int</div>
-              <p>Zara Pirumyan</p>
+              <p class="teacher_name">Zara Pirumyan</p>
             </td>
             <td>
               <div></div>
@@ -910,7 +926,7 @@
             </td>
             <td>
               <div class="w3-eng_col">W3-English/int</div>
-              <p>Zara Pirumyan</p>
+              <p class="teacher_name">Zara Pirumyan</p>
             </td>
             <td>
               <div></div>
@@ -941,7 +957,7 @@
             </td>
             <td>
               <div class="w3-eng_col">W3-English/int</div>
-              <p>Zara Pirumyan</p>
+              <p class="teacher_name">Zara Pirumyan</p>
             </td>
             <td>
               <div></div>
@@ -972,7 +988,7 @@
             </td>
             <td>
               <div class="w3-eng_col">W3-English/int</div>
-              <p>Zara Pirumyan</p>
+              <p class="teacher_name">Zara Pirumyan</p>
             </td>
             <td>
               <div></div>
@@ -1003,7 +1019,7 @@
             </td>
             <td>
               <div class="w3-eng_col">W3-English/int</div>
-              <p>Zara Pirumyan</p>
+              <p class="teacher_name">Zara Pirumyan</p>
             </td>
             <td>
               <div></div>
@@ -1034,7 +1050,7 @@
             </td>
             <td>
               <div class="w3-eng_col">W3-English/int</div>
-              <p>Zara Pirumyan</p>
+              <p class="teacher_name">Zara Pirumyan</p>
             </td>
             <td>
               <div></div>
@@ -1065,7 +1081,7 @@
             </td>
             <td>
               <div class="w3-eng_col">W3-English/int</div>
-              <p>Zara Pirumyan</p>
+              <p class="teacher_name">Zara Pirumyan</p>
             </td>
             <td>
               <div></div>
@@ -1096,7 +1112,7 @@
             </td>
             <td>
               <div class="w3-eng_col">W3-English/int</div>
-              <p>Zara Pirumyan</p>
+              <p class="teacher_name">Zara Pirumyan</p>
             </td>
             <td>
               <div></div>
@@ -1158,11 +1174,11 @@
             </td>
             <td>
               <div class="w4-phy_col">W4 Phyton OOAD</div>
-              <p>John Asatryan</p>
+              <p class="teacher_name">John Asatryan</p>
             </td>
             <td>
               <div class="w4-phy_col">W4 Phyton OOAD</div>
-              <p>John Asatryan</p>
+              <p class="teacher_name">John Asatryan</p>
             </td>
           </tr>
           <tr>
@@ -1189,11 +1205,11 @@
             </td>
             <td>
               <div class="w4-phy_col">W4 Phyton OOAD</div>
-              <p>John Asatryan</p>
+              <p class="teacher_name">John Asatryan</p>
             </td>
             <td>
               <div class="w4-phy_col">W4 Phyton OOAD</div>
-              <p>John Asatryan</p>
+              <p class="teacher_name">John Asatryan</p>
             </td>
           </tr>
           <tr>
@@ -1220,11 +1236,11 @@
             </td>
             <td>
               <div class="w4-phy_col">W4 Phyton OOAD</div>
-              <p>John Asatryan</p>
+              <p class="teacher_name">John Asatryan</p>
             </td>
             <td>
               <div class="w4-phy_col">W4 Phyton OOAD</div>
-              <p>John Asatryan</p>
+              <p class="teacher_name">John Asatryan</p>
             </td>
           </tr>
           <tr>
@@ -1282,7 +1298,7 @@
             </td>
             <td>
               <div class="nwork_col">Computer Networks 2</div>
-              <p>Elen Hakobyan</p>
+              <p class="teacher_name">Elen Hakobyan</p>
             </td>
             <td>
               <div></div>
@@ -1313,7 +1329,7 @@
             </td>
             <td>
               <div class="nwork_col">Computer Networks 2</div>
-              <p>Elen Hakobyan</p>
+              <p class="teacher_name">Elen Hakobyan</p>
             </td>
             <td>
               <div></div>
@@ -1344,7 +1360,7 @@
             </td>
             <td>
               <div class="nwork_col">Computer Networks 2</div>
-              <p>Elen Hakobyan</p>
+              <p class="teacher_name">Elen Hakobyan</p>
             </td>
             <td>
               <div></div>
@@ -1375,7 +1391,7 @@
             </td>
             <td>
               <div class="nwork_col">Computer Networks 2</div>
-              <p>Elen Hakobyan</p>
+              <p class="teacher_name">Elen Hakobyan</p>
             </td>
             <td>
               <div></div>
@@ -1390,7 +1406,7 @@
             </td>
             <td>
               <div class="and_col">Android</div>
-              <p>Robert Levonyan</p>
+              <p class="teacher_name">Robert Levonyan</p>
             </td>
             <td>
               <div></div>
@@ -1402,11 +1418,11 @@
             </td>
             <td>
               <div class="and_col">Android</div>
-              <p>Robert Levonyan</p>
+              <p class="teacher_name">Robert Levonyan</p>
             </td>
             <td>
               <div class="nwork_col">Computer Networks 2</div>
-              <p>Elen Hakobyan</p>
+              <p class="teacher_name">Elen Hakobyan</p>
             </td>
             <td>
               <div></div>
@@ -1421,11 +1437,11 @@
             </td>
             <td>
               <div class="and_col">Android</div>
-              <p>Robert Levonyan</p>
+              <p class="teacher_name">Robert Levonyan</p>
             </td>
             <td>
               <div class="des1-G3_col">Design Wave 1 / G3</div>
-              <p>Samvel Hovsepyan</p>
+              <p class="teacher_name">Samvel Hovsepyan</p>
             </td>
             <td>
               <div></div>
@@ -1433,7 +1449,7 @@
             </td>
             <td>
               <div class="and_col">Android</div>
-              <p>Robert Levonyan</p>
+              <p class="teacher_name">Robert Levonyan</p>
             </td>
             <td>
               <div></div>
@@ -1448,23 +1464,23 @@
             <td class="time_Block">19:30</td>
             <td>
               <div class="w5java_col">W5 Java</div>
-              <p>Arman Arshakyan</p>
+              <p class="teacher_name">Arman Arshakyan</p>
             </td>
             <td>
               <div class="and_col">Android</div>
-              <p>Robert Levonyan</p>
+              <p class="teacher_name">Robert Levonyan</p>
             </td>
             <td>
               <div class="des1-G3_col">Design Wave 1 / G3</div>
-              <p>Samvel Hovsepyan</p>
+              <p class="teacher_name">Samvel Hovsepyan</p>
             </td>
             <td>
               <div class="w5java_col">W5 Java</div>
-              <p>Arman Arshakyan</p>
+              <p class="teacher_name">Arman Arshakyan</p>
             </td>
             <td>
               <div class="and_col">Android</div>
-              <p>Robert Levonyan</p>
+              <p class="teacher_name">Robert Levonyan</p>
             </td>
             <td>
               <div></div>
@@ -1479,23 +1495,23 @@
             <td class="time_Block">20:00</td>
             <td>
               <div class="w5java_col">W5 Java</div>
-              <p>Arman Arshakyan</p>
+              <p class="teacher_name">Arman Arshakyan</p>
             </td>
             <td>
               <div class="and_col">Android</div>
-              <p>Robert Levonyan</p>
+              <p class="teacher_name">Robert Levonyan</p>
             </td>
             <td>
               <div class="des1-G3_col">Design Wave 1 / G3</div>
-              <p>Samvel Hovsepyan</p>
+              <p class="teacher_name">Samvel Hovsepyan</p>
             </td>
             <td>
               <div class="w5java_col">W5 Java</div>
-              <p>Arman Arshakyan</p>
+              <p class="teacher_name">Arman Arshakyan</p>
             </td>
             <td>
               <div class="and_col">Android</div>
-              <p>Robert Levonyan</p>
+              <p class="teacher_name">Robert Levonyan</p>
             </td>
             <td>
               <div></div>
@@ -1510,7 +1526,7 @@
             <td class="time_Block">20:30</td>
             <td>
               <div class="w5java_col">W5 Java</div>
-              <p>Arman Arshakyan</p>
+              <p class="teacher_name">Arman Arshakyan</p>
             </td>
             <td>
               <div></div>
@@ -1522,7 +1538,7 @@
             </td>
             <td>
               <div class="w5java_col">W5 Java</div>
-              <p>Arman Arshakyan</p>
+              <p class="teacher_name">Arman Arshakyan</p>
             </td>
             <td>
               <div></div>
@@ -1643,11 +1659,11 @@
             <td class="time_Block">10:00</td>
             <td>
               <div class="em1_col">EM1</div>
-              <p>Syuniq Mkrtchyan</p>
+              <p class="teacher_name">Syuniq Mkrtchyan</p>
             </td>
             <td>
               <div class="em4_col">EM4</div>
-              <p>Syuniq Mkrtchyan</p>
+              <p class="teacher_name">Syuniq Mkrtchyan</p>
             </td>
             <td>
               <div></div>
@@ -1655,15 +1671,15 @@
             </td>
             <td>
               <div class="em1_col">EM1</div>
-              <p>Syuniq Mkrtchyan</p>
+              <p class="teacher_name">Syuniq Mkrtchyan</p>
             </td>
             <td>
               <div class="em4_col">EM4</div>
-              <p>Syuniq Mkrtchyan</p>
+              <p class="teacher_name">Syuniq Mkrtchyan</p>
             </td>
             <td>
               <div class="gd-G1_col">Graphic Design G1</div>
-              <p>Laura Nazinyan</p>
+              <p class="teacher_name">Laura Nazinyan</p>
             </td>
             <td>
               <div></div>
@@ -1674,11 +1690,11 @@
             <td class="time_Block">10:30</td>
             <td>
               <div class="em1_col">EM1</div>
-              <p>Syuniq Mkrtchyan</p>
+              <p class="teacher_name">Syuniq Mkrtchyan</p>
             </td>
             <td>
               <div class="em4_col">EM4</div>
-              <p>Syuniq Mkrtchyan</p>
+              <p class="teacher_name">Syuniq Mkrtchyan</p>
             </td>
             <td>
               <div></div>
@@ -1686,15 +1702,15 @@
             </td>
             <td>
               <div class="em1_col">EM1</div>
-              <p>Syuniq Mkrtchyan</p>
+              <p class="teacher_name">Syuniq Mkrtchyan</p>
             </td>
             <td>
               <div class="em4_col">EM4</div>
-              <p>Syuniq Mkrtchyan</p>
+              <p class="teacher_name">Syuniq Mkrtchyan</p>
             </td>
             <td>
               <div class="gd-G1_col">Graphic Design G1</div>
-              <p>Laura Nazinyan</p>
+              <p class="teacher_name">Laura Nazinyan</p>
             </td>
             <td>
               <div></div>
@@ -1705,11 +1721,11 @@
             <td class="time_Block">11:00</td>
             <td>
               <div class="em1_col">EM1</div>
-              <p>Syuniq Mkrtchyan</p>
+              <p class="teacher_name">Syuniq Mkrtchyan</p>
             </td>
             <td>
               <div class="em4_col">EM4</div>
-              <p>Syuniq Mkrtchyan</p>
+              <p class="teacher_name">Syuniq Mkrtchyan</p>
             </td>
             <td>
               <div></div>
@@ -1717,15 +1733,15 @@
             </td>
             <td>
               <div class="em1_col">EM1</div>
-              <p>Syuniq Mkrtchyan</p>
+              <p class="teacher_name">Syuniq Mkrtchyan</p>
             </td>
             <td>
               <div class="em4_col">EM4</div>
-              <p>Syuniq Mkrtchyan</p>
+              <p class="teacher_name">Syuniq Mkrtchyan</p>
             </td>
             <td>
               <div class="gd-G1_col">Graphic Design G1</div>
-              <p>Laura Nazinyan</p>
+              <p class="teacher_name">Laura Nazinyan</p>
             </td>
             <td>
               <div></div>
@@ -1756,7 +1772,7 @@
             </td>
             <td>
               <div class="gd-G1_col">Graphic Design G1</div>
-              <p>Laura Nazinyan</p>
+              <p class="teacher_name">Laura Nazinyan</p>
             </td>
             <td>
               <div></div>
@@ -1771,7 +1787,7 @@
             </td>
             <td>
               <div class="en-pr_col">English / Practice</div>
-              <p>Vardges Arsenyan</p>
+              <p class="teacher_name">Vardges Arsenyan</p>
             </td>
             <td>
               <div></div>
@@ -1787,7 +1803,7 @@
             </td>
             <td>
               <div class="gd-G1_col">Graphic Design G1</div>
-              <p>Laura Nazinyan</p>
+              <p class="teacher_name">Laura Nazinyan</p>
             </td>
             <td>
               <div></div>
@@ -1802,7 +1818,7 @@
             </td>
             <td>
               <div class="en-pr_col">English / Practice</div>
-              <p>Vardges Arsenyan</p>
+              <p class="teacher_name">Vardges Arsenyan</p>
             </td>
             <td>
               <div></div>
@@ -1818,7 +1834,7 @@
             </td>
             <td>
               <div class="gd-G1_col">Graphic Design G1</div>
-              <p>Laura Nazinyan</p>
+              <p class="teacher_name">Laura Nazinyan</p>
             </td>
             <td>
               <div></div>
@@ -1833,7 +1849,7 @@
             </td>
             <td>
               <div class="en-pr_col">English / Practice</div>
-              <p>Vardges Arsenyan</p>
+              <p class="teacher_name">Vardges Arsenyan</p>
             </td>
             <td>
               <div></div>
@@ -1849,7 +1865,7 @@
             </td>
             <td>
               <div class="gd-G1_col">Graphic Design G1</div>
-              <p>Laura Nazinyan</p>
+              <p class="teacher_name">Laura Nazinyan</p>
             </td>
             <td>
               <div></div>
@@ -1880,7 +1896,7 @@
             </td>
             <td>
               <div class="gd-G1_col">Graphic Design G1</div>
-              <p>Laura Nazinyan</p>
+              <p class="teacher_name">Laura Nazinyan</p>
             </td>
             <td>
               <div></div>
@@ -1911,7 +1927,7 @@
             </td>
             <td>
               <div class="ui-LU_col">UI/UX Level Up</div>
-              <p>Samvel Hovsepyan</p>
+              <p class="teacher_name">Samvel Hovsepyan</p>
             </td>
             <td>
               <div></div>
@@ -1942,7 +1958,7 @@
             </td>
             <td>
               <div class="ui-LU_col">UI/UX Level Up</div>
-              <p>Samvel Hovsepyan</p>
+              <p class="teacher_name">Samvel Hovsepyan</p>
             </td>
             <td>
               <div></div>
@@ -1973,7 +1989,7 @@
             </td>
             <td>
               <div class="ui-LU_col">UI/UX Level Up</div>
-              <p>Samvel Hovsepyan</p>
+              <p class="teacher_name">Samvel Hovsepyan</p>
             </td>
             <td>
               <div></div>
@@ -2004,7 +2020,7 @@
             </td>
             <td>
               <div class="ui-LU_col">UI/UX Level Up</div>
-              <p>Samvel Hovsepyan</p>
+              <p class="teacher_name">Samvel Hovsepyan</p>
             </td>
             <td>
               <div></div>
@@ -2035,7 +2051,7 @@
             </td>
             <td>
               <div class="ui-LU_col">UI/UX Level Up</div>
-              <p>Samvel Hovsepyan</p>
+              <p class="teacher_name">Samvel Hovsepyan</p>
             </td>
             <td>
               <div></div>
@@ -2097,7 +2113,7 @@
             </td>
             <td>
               <div class="tei_col">TEI</div>
-              <p>Vardan Grigoryan</p>
+              <p class="teacher_name">Vardan Grigoryan</p>
             </td>
             <td>
               <div></div>
@@ -2128,7 +2144,7 @@
             </td>
             <td>
               <div class="tei_col">TEI</div>
-              <p>Vardan Grigoryan</p>
+              <p class="teacher_name">Vardan Grigoryan</p>
             </td>
             <td>
               <div></div>
@@ -2159,7 +2175,7 @@
             </td>
             <td>
               <div class="tei_col">TEI</div>
-              <p>Vardan Grigoryan</p>
+              <p class="teacher_name">Vardan Grigoryan</p>
             </td>
             <td>
               <div></div>
@@ -2190,7 +2206,7 @@
             </td>
             <td>
               <div class="tei_col">TEI</div>
-              <p>Vardan Grigoryan</p>
+              <p class="teacher_name">Vardan Grigoryan</p>
             </td>
             <td>
               <div></div>
@@ -2201,27 +2217,27 @@
             <td class="time_Block">19:00</td>
             <td>
               <div class="gd-G1_col">Graphic Design G1</div>
-              <p>Laura Nazinyan</p>
+              <p class="teacher_name">Laura Nazinyan</p>
             </td>
             <td>
               <div class="uiB1_col">UI/UX Beginners 1</div>
-              <p>Samvel Hovsepyan</p>
+              <p class="teacher_name">Samvel Hovsepyan</p>
             </td>
             <td>
               <div class="uiB2_col">UI/UX Beginners 2</div>
-              <p>Samvel Hovsepyan</p>
+              <p class="teacher_name">Samvel Hovsepyan</p>
             </td>
             <td>
               <div class="ui-LU_col">UI/UX Level Up</div>
-              <p>Samvel Hovsepyan</p>
+              <p class="teacher_name">Samvel Hovsepyan</p>
             </td>
             <td>
               <div class="gd-G1_col">Graphic Design G1</div>
-              <p>Laura Nazinyan</p>
+              <p class="teacher_name">Laura Nazinyan</p>
             </td>
             <td>
               <div class="tei_col">TEI</div>
-              <p>Vardan Grigoryan</p>
+              <p class="teacher_name">Vardan Grigoryan</p>
             </td>
             <td>
               <div></div>
@@ -2232,27 +2248,27 @@
             <td class="time_Block">19:30</td>
             <td>
               <div class="gd-G1_col">Graphic Design G1</div>
-              <p>Laura Nazinyan</p>
+              <p class="teacher_name">Laura Nazinyan</p>
             </td>
             <td>
               <div class="uiB1_col">UI/UX Beginners 1</div>
-              <p>Samvel Hovsepyan</p>
+              <p class="teacher_name">Samvel Hovsepyan</p>
             </td>
             <td>
               <div class="uiB2_col">UI/UX Beginners 2</div>
-              <p>Samvel Hovsepyan</p>
+              <p class="teacher_name">Samvel Hovsepyan</p>
             </td>
             <td>
               <div class="ui-LU_col">UI/UX Level Up</div>
-              <p>Samvel Hovsepyan</p>
+              <p class="teacher_name">Samvel Hovsepyan</p>
             </td>
             <td>
               <div class="gd-G1_col">Graphic Design G1</div>
-              <p>Laura Nazinyan</p>
+              <p class="teacher_name">Laura Nazinyan</p>
             </td>
             <td>
               <div class="tei_col">TEI</div>
-              <p>Vardan Grigoryan</p>
+              <p class="teacher_name">Vardan Grigoryan</p>
             </td>
             <td>
               <div></div>
@@ -2263,23 +2279,23 @@
             <td class="time_Block">20:00</td>
             <td>
               <div class="gd-G1_col">Graphic Design G1</div>
-              <p>Laura Nazinyan</p>
+              <p class="teacher_name">Laura Nazinyan</p>
             </td>
             <td>
               <div class="uiB1_col">UI/UX Beginners 1</div>
-              <p>Samvel Hovsepyan</p>
+              <p class="teacher_name">Samvel Hovsepyan</p>
             </td>
             <td>
               <div class="uiB2_col">UI/UX Beginners 2</div>
-              <p>Samvel Hovsepyan</p>
+              <p class="teacher_name">Samvel Hovsepyan</p>
             </td>
             <td>
               <div class="ui-LU_col">UI/UX Level Up</div>
-              <p>Samvel Hovsepyan</p>
+              <p class="teacher_name">Samvel Hovsepyan</p>
             </td>
             <td>
               <div class="gd-G1_col">Graphic Design G1</div>
-              <p>Laura Nazinyan</p>
+              <p class="teacher_name">Laura Nazinyan</p>
             </td>
             <td>
               <div></div>
@@ -2294,23 +2310,23 @@
             <td class="time_Block">20:30</td>
             <td>
               <div class="gd-G1_col">Graphic Design G1</div>
-              <p>Laura Nazinyan</p>
+              <p class="teacher_name">Laura Nazinyan</p>
             </td>
             <td>
               <div class="uiB1_col">UI/UX Beginners 1</div>
-              <p>Samvel Hovsepyan</p>
+              <p class="teacher_name">Samvel Hovsepyan</p>
             </td>
             <td>
               <div class="uiB2_col">UI/UX Beginners 2</div>
-              <p>Samvel Hovsepyan</p>
+              <p class="teacher_name">Samvel Hovsepyan</p>
             </td>
             <td>
               <div class="ui-LU_col">UI/UX Level Up</div>
-              <p>Samvel Hovsepyan</p>
+              <p class="teacher_name">Samvel Hovsepyan</p>
             </td>
             <td>
               <div class="gd-G1_col">Graphic Design G1</div>
-              <p>Laura Nazinyan</p>
+              <p class="teacher_name">Laura Nazinyan</p>
             </td>
             <td>
               <div></div>

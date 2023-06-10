@@ -61,3 +61,52 @@
   tr:hover{
     background-color: #eae7e7;
   }
+  button.search {
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    color: #fff;
+    background-color: #337AB7;
+    border-color: #2E6DA4;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    cursor: pointer;
+}
+button.search:hover {
+    background-color: #234F75;
+}
+button.see {
+    color: #fff;
+    background-color: #449D44;
+    border-color: #398439;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    cursor: pointer;
+}
+button.see:hover{
+    background-color: #2A702A;
+}
+button.filter {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+}
